@@ -8,7 +8,7 @@ import { useSound } from '../hooks/useSound';
 const Terminal: React.FC = () => {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'model', text: "It's dangerous to go alone! Ask me anything about Alex's backend skills." }
+    { role: 'model', text: "It's dangerous to go alone! Ask me anything about Kartikey's backend skills." }
   ]);
   const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
