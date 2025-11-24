@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Super Alex | Backend World</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Super Kartikey | Backend World</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -48,6 +50,15 @@
         }
       }
     </script>
+    
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .pixel-text-shadow {
+          text-shadow: 4px 4px 0 #000;
+        }
+      }
+    </style>
+
     <style>
       /* Custom scrollbar for that retro feel */
       ::-webkit-scrollbar {
@@ -63,33 +74,26 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #f8b800; 
       }
-      
-      .pixel-text-shadow {
-        text-shadow: 4px 4px 0 #000;
-      }
-      
-      .pixel-border {
-        box-shadow: 
-          -4px 0 0 0 black,
-          4px 0 0 0 black,
-          0 -4px 0 0 black,
-          0 4px 0 0 black;
-        margin: 4px;
-      }
     </style>
-  <script type="importmap">
+
+    <script type="importmap">
 {
   "imports": {
     "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.0/client",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.0",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
     "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0"
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
   }
 }
 </script>
-</head>
+  </head>
   <body class="bg-game-sky text-black antialiased overflow-x-hidden">
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
