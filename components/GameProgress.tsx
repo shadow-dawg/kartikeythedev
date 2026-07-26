@@ -59,6 +59,10 @@ const GameProgress: React.FC = () => {
                     <img 
                         src={RESUME_DATA.avatar} 
                         alt="Player" 
+                        referrerPolicy="no-referrer"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = 'https://github.com/shadow-dawg.png';
+                        }}
                         className="w-full h-full object-cover contrast-125 saturate-150 brightness-110"
                     />
                 </div>
