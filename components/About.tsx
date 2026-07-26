@@ -64,6 +64,10 @@ const About: React.FC = () => {
                         <img 
                             src={RESUME_DATA.avatar} 
                             alt={RESUME_DATA.name}
+                            referrerPolicy="no-referrer"
+                            onError={(e) => {
+                              (e.target as HTMLImageElement).src = 'https://github.com/shadow-dawg.png';
+                            }}
                             className="w-full h-full object-cover contrast-125 saturate-150" 
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
