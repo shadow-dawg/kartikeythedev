@@ -7,7 +7,7 @@ export const RESUME_DATA = {
   title: "Backend Developer",
   tagline: "I build servers so fast, they finish requests before you even send them.",
   about: "Level 99 Backend Sorcerer. I write code that explains itself (mostly) and build systems robust enough to survive a coffee spill on the server rack. If it works on my machine, it's a feature, not a bug.",
-  avatar: "https://media.licdn.com/dms/image/v2/D4E03AQHE8RZ9Y3r2dA/profile-displayphoto-scale_200_200/B4EZptFXeXGYAY-/0/1762766716727?e=1765411200&v=beta&t=DxCgFPHA-2CB_U3qjMmtQgG1KvDnfL7PdyESdmlbFYI",
+  avatar: "https://github.com/shadow-dawg.png",
   resumeLink: "#", // Replace with your actual resume PDF URL
   skills: [
     { 
@@ -118,6 +118,17 @@ export const PROJECTS: Project[] = [
 export const EXPERIENCE: ExperienceItem[] = [
   {
     id: 'e1',
+    role: "3rd Place Winner 🥉",
+    company: "Unstoppable Hackathon @ LNMIIT Jaipur",
+    period: "Hackathon Quest",
+    description: [
+      "Secured 3rd place in the open-source contribution Unstoppable Hackathon held at LNMIIT Jaipur.",
+      "Contributed impactful code, feature optimizations, and bug fixes to open-source projects during an intense sprint.",
+      "Recognized for top-tier open-source problem solving and rapid backend execution."
+    ]
+  },
+  {
+    id: 'e2',
     role: "Technical Member",
     company: "Code Crafters Coding Club",
     period: "College Tenure",
@@ -149,6 +160,10 @@ Inventory (Skills): ${RESUME_DATA.skills.map(s => s.name).join(', ')}
 
 Quest Log (Projects):
 ${PROJECTS.map(p => `- ${p.title}: ${p.description} (Tech: ${p.tech.join(', ')})`).join('\n')}
+
+Adventure Log (Achievements & Experience):
+- 3rd Place Winner @ Unstoppable Hackathon (LNMIIT Jaipur) - Open source contribution hackathon.
+- Technical Member @ Code Crafters Coding Club.
 
 If asked about something not in the database, say "Error 404: Knowledge not found. Maybe try a different castle?"
 `;
